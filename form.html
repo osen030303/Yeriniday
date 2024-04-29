@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+
+<style>
+    body {
+    background-image: url('7812271.jpg');
+    background-color: purple;
+    color: black;
+    font-family: Helvetica;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set body height to full viewport height */
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	}
+
+	.login-container {
+		background-color: #e6e6fa; 
+		border: 2px solid black; 
+		border-radius: 20px;
+		padding: 20px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		width: 300px;
+		text-align: center;
+	}
+	
+	.login-container p {
+	margin: 0;
+	}
+
+	.login-container input[type="text"],
+	.login-container input[type="password"] {
+		font-family: Helvetica;
+		padding: 5px;
+		margin-bottom: 20px;
+		border: 2px solid black;
+		border-radius: 10px;
+		background-color: #f7d1d8; 
+		font-size: 16px;
+		max-width: 150px;
+		height: 10px;
+		color: black;
+		font-family: "Courier New", Courier, monospace;
+	}
+
+	.login-container input[type="submit"] {
+		width: 100%;
+		border: 2px solid black;
+		border-radius: 20px;
+		padding: 12px;
+		background-color: ffd1df; 
+		font-family: "Courier New", Courier, monospace;
+	}
+
+</style>
+
+<body>
+	
+	<div class="login-container">
+		<form id="loginForm">
+			<p>ID</p>
+			<p><input type="text" name="ID"></p>
+			<p>Passcode </p>
+			<p><input type="password" name="pwd"></p>
+			<input type="submit" value="Submit">
+		</form>
+
+		<script>
+			document.getElementById('loginForm').addEventListener('submit', function(event) {
+				// Prevent the default form submission
+				event.preventDefault();
+
+				// Get the input values
+				var ID = document.querySelector('input[name="ID"]').value;
+				var pwd = document.querySelector('input[name="pwd"]').value;
+
+				// Check if ID is "chldPfls" and passcode is "12345"
+				if (ID === "yerin" && pwd === "12345") {
+					// If both are correct, submit the form
+					document.getElementById('loginForm').action = "file:///C:/Users/seeun/OneDrive/Desktop/%EC%B5%9C%EC%98%88%EB%A6%B0/bday/Yeriniday.html";
+					document.getElementById('loginForm').submit();
+				} else {
+					// If either or both are incorrect, show an alert message
+					alert("Invalid ID or passcode. Please try again.");
+				}
+			});
+		</script>
+	</div>
+    
+</body>
+</html>
